@@ -1,76 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
   <title>Terms of Service — Bookworm</title>
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #0f0f0f; color: #f0ede6; padding: 2rem; }
-    .container { max-width: 720px; margin: 0 auto; }
-    h1 { font-size: 2rem; margin-bottom: 0.5rem; }
-    .meta { color: #a09d96; font-size: 0.9rem; margin-bottom: 2.5rem; }
-    h2 { font-size: 1.2rem; margin: 2rem 0 0.75rem; color: #7dd3a8; }
-    p, li { color: #c8c4bc; line-height: 1.8; margin-bottom: 0.75rem; }
-    ul { padding-left: 1.5rem; }
-    a { color: #7dd3a8; }
-    .back { display: inline-block; margin-bottom: 2rem; color: #a09d96; text-decoration: none; }
-    .back:hover { color: #f0ede6; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+           max-width: 720px; margin: 60px auto; padding: 0 24px; color: #222; line-height: 1.7; }
+    h1 { font-size: 2rem; margin-bottom: 8px; }
+    h2 { font-size: 1.2rem; margin-top: 36px; }
+    p, li { color: #444; }
+    a { color: #1da1f2; }
+    .updated { color: #999; font-size: .9rem; margin-bottom: 40px; }
   </style>
 </head>
 <body>
-  <div class="container">
-    <a class="back" href="/">← Back</a>
-    <h1>Terms of Service</h1>
-    <p class="meta">Last updated: March 2026</p>
+  <h1>📚 Bookworm Terms of Service</h1>
+  <p class="updated">Last updated: March 7, 2026</p>
 
-    <h2>1. Service Description</h2>
-    <p>Bookworm is an automated bot on X (Twitter) that allows users to gift Kindle eBooks to other X users. By using @bookwormx402, you agree to these terms.</p>
+  <p>Welcome to Bookworm. By using our service (the X bot @bookwormx402 and associated web pages), you agree to these terms.</p>
 
-    <h2>2. Eligibility</h2>
-    <ul>
-      <li>You must have a valid X (Twitter) account.</li>
-      <li>You must be of legal age to make online purchases in your jurisdiction.</li>
-      <li>The service is intended for gifting Kindle eBooks only. Physical products and non-Kindle items are not supported.</li>
-    </ul>
+  <h2>1. The Service</h2>
+  <p>Bookworm allows X users to gift Kindle eBooks to other X users by tweeting a command at @bookwormx402. The sender pays for the book via Stripe; Bookworm fulfills the order by purchasing the eBook on Amazon and delivering it to the recipient's Kindle account.</p>
 
-    <h2>3. How It Works</h2>
-    <ul>
-      <li>A sender tweets: <code>@bookwormx402 send @recipient [Amazon Kindle link]</code></li>
-      <li>Bookworm fetches the book price and generates a payment link for the sender.</li>
-      <li>Upon payment confirmation, Bookworm contacts the recipient to collect their Amazon email address.</li>
-      <li>The book is delivered to the recipient's Kindle account.</li>
-    </ul>
+  <h2>2. Eligibility</h2>
+  <ul>
+    <li>You must have a valid X (Twitter) account to use the service.</li>
+    <li>You must be legally able to make purchases in your jurisdiction.</li>
+    <li>You must only send links to legitimate Kindle eBooks available on Amazon.</li>
+  </ul>
 
-    <h2>4. Payments</h2>
-    <ul>
-      <li>Payments are processed via Stripe. By completing payment, you agree to Stripe's terms.</li>
-      <li>Prices displayed are fetched live from Amazon and may vary by region.</li>
-      <li>A small service fee may be added to cover operational costs. This will be disclosed before payment.</li>
-    </ul>
+  <h2>3. Payments</h2>
+  <ul>
+    <li>All payments are processed by Stripe. By completing a payment you agree to <a href="https://stripe.com/legal" target="_blank">Stripe's Terms of Service</a>.</li>
+    <li>The amount charged is the book price shown at the time of your request.</li>
+    <li>Refunds are available if the book cannot be delivered due to a technical failure on our end. Contact <a href="mailto:support@bookworm402.com">support@bookworm402.com</a>.</li>
+    <li>We are not responsible for price changes between your request and payment.</li>
+  </ul>
 
-    <h2>5. Refunds</h2>
-    <ul>
-      <li>Refunds are available if the book cannot be delivered due to a technical failure on our end.</li>
-      <li>No refunds once the Kindle book has been successfully delivered.</li>
-      <li>To request a refund, contact us at <a href="https://x.com/bookwormx402">@bookwormx402</a> within 48 hours of the transaction.</li>
-    </ul>
+  <h2>4. Gift Delivery</h2>
+  <ul>
+    <li>Delivery requires the recipient to claim their gift and provide a valid Amazon account email.</li>
+    <li>We are not responsible if the recipient does not claim their gift within 48 hours.</li>
+    <li>We only support Kindle eBooks — physical books and other Amazon products are not supported.</li>
+    <li>Bookworm is not affiliated with Amazon or X.</li>
+  </ul>
 
-    <h2>6. Prohibited Use</h2>
-    <ul>
-      <li>Do not use the service for spam, abuse, or fraudulent transactions.</li>
-      <li>Do not attempt to game or exploit the service.</li>
-      <li>We reserve the right to block users who violate these terms.</li>
-    </ul>
+  <h2>5. Acceptable Use</h2>
+  <p>You agree not to:</p>
+  <ul>
+    <li>Use the service to send unsolicited gifts or harass other users.</li>
+    <li>Attempt to abuse, manipulate, or exploit the service.</li>
+    <li>Use the service for any unlawful purpose.</li>
+  </ul>
 
-    <h2>7. Disclaimers</h2>
-    <p>Bookworm is not affiliated with Amazon, X (Twitter), or Stripe. We are an independent service. We do not guarantee availability of specific books or pricing accuracy at all times.</p>
+  <h2>6. Disclaimers</h2>
+  <p>The service is provided "as is." We make no guarantees of uptime or uninterrupted delivery. Amazon and X are independent platforms and may change their services at any time.</p>
 
-    <h2>8. Changes to Terms</h2>
-    <p>We may update these terms at any time. Continued use of the service constitutes acceptance of the updated terms.</p>
+  <h2>7. Changes to These Terms</h2>
+  <p>We may update these terms from time to time. Continued use of the service after changes constitutes acceptance of the updated terms.</p>
 
-    <h2>9. Contact</h2>
-    <p>Questions? Reach out via X: <a href="https://x.com/bookwormx402" target="_blank">@bookwormx402</a>.</p>
-  </div>
+  <h2>8. Contact</h2>
+  <p>Questions? Reach us at <a href="mailto:support@bookworm402.com">support@bookworm402.com</a> or <a href="https://x.com/bookwormx402" target="_blank">@bookwormx402 on X</a>.</p>
 </body>
 </html>
