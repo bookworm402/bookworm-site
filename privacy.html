@@ -1,55 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Privacy Policy — Bookworm</title>
   <style>
-    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-           max-width: 720px; margin: 60px auto; padding: 0 24px; color: #222; line-height: 1.7; }
-    h1 { font-size: 2rem; margin-bottom: 8px; }
-    h2 { font-size: 1.2rem; margin-top: 36px; }
-    p, li { color: #444; }
-    a { color: #1da1f2; }
-    .updated { color: #999; font-size: .9rem; margin-bottom: 40px; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #0f0f0f;
+      color: #e8e8e8;
+      line-height: 1.7;
+      padding: 48px 24px;
+    }
+    .container { max-width: 720px; margin: 0 auto; }
+    .logo { font-size: 28px; font-weight: 700; color: #ffffff; margin-bottom: 8px; letter-spacing: -0.5px; }
+    .logo span { color: #4f8ef7; }
+    .tagline { font-size: 14px; color: #888; margin-bottom: 48px; }
+    h1 { font-size: 32px; font-weight: 700; color: #ffffff; margin-bottom: 8px; }
+    .last-updated { font-size: 13px; color: #666; margin-bottom: 40px; }
+    h2 { font-size: 18px; font-weight: 600; color: #ffffff; margin-top: 40px; margin-bottom: 12px; }
+    p { color: #bbb; margin-bottom: 16px; font-size: 15px; }
+    ul { color: #bbb; font-size: 15px; margin-bottom: 16px; padding-left: 20px; }
+    li { margin-bottom: 8px; }
+    a { color: #4f8ef7; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .divider { border: none; border-top: 1px solid #222; margin: 40px 0; }
+    .contact-box { background: #1a1a1a; border: 1px solid #2a2a2a; border-radius: 10px; padding: 24px; margin-top: 16px; }
+    .contact-box p { margin: 0; }
+    footer { margin-top: 64px; font-size: 13px; color: #444; }
   </style>
 </head>
 <body>
-  <h1>📚 Bookworm Privacy Policy</h1>
-  <p class="updated">Last updated: March 7, 2026</p>
-
-  <p>Bookworm (@bookwormx402) is a service that lets X (Twitter) users gift Kindle eBooks to each other with a single tweet. This policy explains what data we collect, why, and how we use it.</p>
-
-  <h2>1. What We Collect</h2>
-  <ul>
-    <li><strong>X (Twitter) username</strong> — used solely to verify the identity of the gift recipient when they claim their book. We do not store your full Twitter profile or access your timeline.</li>
-    <li><strong>Amazon account email address</strong> — provided voluntarily by the recipient to receive the gifted Kindle book. Used only to fulfill the gift order.</li>
-    <li><strong>Payment information</strong> — handled entirely by Stripe. We never see or store your card details. See <a href="https://stripe.com/privacy" target="_blank">Stripe's Privacy Policy</a>.</li>
-    <li><strong>Public tweet content</strong> — we read public mentions of @bookwormx402 to process gift requests. We do not store your tweets beyond what is needed to fulfill the order.</li>
-  </ul>
-
-  <h2>2. How We Use Your Data</h2>
-  <ul>
-    <li>To verify the identity of a gift recipient via Twitter OAuth (read-only).</li>
-    <li>To deliver a gifted Kindle eBook to the recipient's Amazon account.</li>
-    <li>To process payments through Stripe.</li>
-    <li>We do not sell, rent, or share your data with third parties for marketing purposes.</li>
-  </ul>
-
-  <h2>3. Data Retention</h2>
-  <p>Order data (usernames, Amazon email, Amazon link) is retained only as long as needed to fulfill the gift. Claim records are deleted after 30 days.</p>
-
-  <h2>4. Third-Party Services</h2>
-  <ul>
-    <li><strong>X (Twitter)</strong> — for reading public mentions and verifying recipient identity. Governed by <a href="https://twitter.com/en/privacy" target="_blank">X's Privacy Policy</a>.</li>
-    <li><strong>Stripe</strong> — for payment processing. Governed by <a href="https://stripe.com/privacy" target="_blank">Stripe's Privacy Policy</a>.</li>
-    <li><strong>Amazon</strong> — for Kindle gift delivery. Governed by <a href="https://www.amazon.com/gp/help/customer/display.html?nodeId=468496" target="_blank">Amazon's Privacy Notice</a>.</li>
-  </ul>
-
-  <h2>5. Your Rights</h2>
-  <p>You may request deletion of any data we hold about you by contacting us at <a href="mailto:support@bookworm402.com">support@bookworm402.com</a>. We will respond within 30 days.</p>
-
-  <h2>6. Contact</h2>
-  <p>Questions? Reach us at <a href="mailto:support@bookworm402.com">support@bookworm402.com</a> or <a href="https://x.com/bookwormx402" target="_blank">@bookwormx402 on X</a>.</p>
+  <div class="container">
+    <div class="logo">📚 Book<span>worm</span></div>
+    <div class="tagline">Gift books to anyone on the internet.</div>
+    <h1>Privacy Policy</h1>
+    <div class="last-updated">Last updated: March 12, 2026</div>
+    <p>Bookworm ("we", "us", or "our") operates a social book gifting service accessible via Twitter/X (@bookwormx402). This Privacy Policy explains how we collect, use, store, and protect information when you use our service.</p>
+    <h2>1. What Information We Collect</h2>
+    <p>We collect only the minimum information necessary to fulfill book gifts:</p>
+    <ul>
+      <li><strong>Twitter/X handles</strong> of the sender and recipient, sourced from public mentions of our bot.</li>
+      <li><strong>Amazon product URLs</strong> for the book being gifted, provided in the tweet command.</li>
+      <li><strong>Recipient email address</strong>, collected via a Stripe-hosted checkout page for the purpose of delivering the Kindle or Audible gift to the correct Amazon account.</li>
+      <li><strong>Order reference IDs</strong> (derived from Stripe session identifiers) used to track fulfillment status.</li>
+    </ul>
+    <p>We do not collect payment card information. All payment processing is handled by Stripe, Inc. under their own privacy policy and PCI DSS compliance.</p>
+    <h2>2. How We Use Your Information</h2>
+    <p>Information collected is used solely for the following purposes:</p>
+    <ul>
+      <li>Fulfilling the book gift order by purchasing and delivering it to the recipient's Amazon account.</li>
+      <li>Sending confirmation notifications to the sender and recipient via Twitter/X Direct Message.</li>
+      <li>Tracking order status and preventing duplicate transactions.</li>
+    </ul>
+    <p>We do not use your information for marketing, analytics, profiling, or any purpose beyond order fulfillment.</p>
+    <h2>3. How We Store Your Information</h2>
+    <p>Recipient email addresses are collected and stored exclusively within Stripe's PCI DSS-compliant infrastructure. They are not stored on our internal systems beyond the immediate transaction window.</p>
+    <p>Internal operational data (order reference IDs, Twitter handles, Amazon URLs) is stored on encrypted infrastructure (AES-256 disk encryption) and is purged within 30 days of order completion.</p>
+    <h2>4. Data Sharing</h2>
+    <p>We do not sell, rent, or share your personal information with third parties, except as required to fulfill your order:</p>
+    <ul>
+      <li><strong>Stripe, Inc.</strong> — payment processing and email collection. <a href="https://stripe.com/privacy" target="_blank">Stripe Privacy Policy →</a></li>
+      <li><strong>Amazon.com, Inc.</strong> — book delivery to the recipient's Amazon account using the email address provided.</li>
+    </ul>
+    <p>No other third parties receive your data.</p>
+    <h2>5. Data Retention</h2>
+    <p>Order reference data is retained for no more than 30 days following order fulfillment. Recipient email addresses are managed and retained by Stripe per their data retention policies. You may contact Stripe directly to request deletion of your data from their systems.</p>
+    <h2>6. Your Rights</h2>
+    <p>Depending on your jurisdiction, you may have the right to:</p>
+    <ul>
+      <li>Access the personal data we hold about you.</li>
+      <li>Request correction or deletion of your data.</li>
+      <li>Object to or restrict processing of your data.</li>
+      <li>Lodge a complaint with a relevant data protection authority.</li>
+    </ul>
+    <p>To exercise any of these rights, contact us at the address below.</p>
+    <h2>7. Security</h2>
+    <p>We take reasonable technical and organizational measures to protect your information. All data in transit is encrypted via TLS. Data at rest is encrypted using AES-256. Access to systems handling personal data is restricted to authorized personnel only, protected by multi-factor authentication and scoped API credentials.</p>
+    <h2>8. Children's Privacy</h2>
+    <p>Our service is not directed at individuals under the age of 13. We do not knowingly collect personal information from children.</p>
+    <h2>9. Changes to This Policy</h2>
+    <p>We may update this Privacy Policy from time to time. The "last updated" date at the top of this page reflects the most recent revision. Continued use of the service following any changes constitutes your acceptance of the updated policy.</p>
+    <hr class="divider" />
+    <h2>10. Contact</h2>
+    <p>If you have questions, concerns, or requests relating to this Privacy Policy, please contact us:</p>
+    <div class="contact-box">
+      <p>📧 <a href="mailto:security@bookworm402.com">security@bookworm402.com</a><br />
+      🐦 <a href="https://twitter.com/bookwormx402" target="_blank">@bookwormx402 on Twitter/X</a></p>
+    </div>
+    <footer>
+      <p>© 2026 Bookworm. All rights reserved.</p>
+    </footer>
+  </div>
 </body>
 </html>
